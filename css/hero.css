@@ -1,0 +1,51 @@
+.hero{
+	position:absolute;
+	width:90px;
+	height:110px;
+	margin-top:-55px;
+}
+.hero.computer{
+	left:30px;
+}
+.hero.player{
+	left:600px;
+	-moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: fliph;
+}
+.heroHead{
+	position:absolute;
+	width:93px;
+	height:77px;
+	background-image:url(../img/hero/head1.png);
+	background-position:0px 0px;
+	z-index:4;
+}
+.heroLags{
+	position:absolute;
+	width:65px;
+	height:67px;
+	background-image:url(../img/hero/lags1.png);
+	background-position:0px 0px;
+	margin-top:54px;
+	margin-left:-4px;
+	z-index:2;
+}
+.handLeft{
+	position:absolute;
+	width:24px;
+	height:40px;
+	background-image:url(../img/hero/handLeft.png);
+	margin:70px 0px 0px 20px;
+	z-index:3;
+}
+.handRight{
+	position:absolute;
+	width:29px;
+	height:15px;
+	background-image:url(../img/hero/handRight.png);
+	margin:59px 0px 0px 41px;
+	z-index:1;
+}

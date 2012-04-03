@@ -1,0 +1,44 @@
+body,h1,h2,h3,h4,h5,h6,form,input{
+	padding:0px;
+	margin:0px;
+}
+body{
+	text-align:center;
+}
+img{
+	border:0px;
+}
+.cb{
+	clear:both;
+	height:0px;
+	overflow:hidden;
+}
+a{
+	text-decoration:underline;
+	cursor:pointer;
+}
+.area{
+	width:720px;
+	height:240px;
+	margin:20px auto;
+	background-image:url(../img/bg.png);
+	background-position:bottom center;
+	background-repeat:no-repeat;
+	position:relative;
+	overflow:hidden;
+}
+.border{
+	position:absolute;
+	background-image:url(../img/border.png);
+	width:81px;
+	height:151px;
+	top:70px;
+	left:540px;
+}
+.border.left{
+	left:80px;
+	-moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
