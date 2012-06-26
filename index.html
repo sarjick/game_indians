@@ -4,9 +4,11 @@
 <title>indians</title>
 <link rel="stylesheet"  href="css/main.css" />
 <link rel="stylesheet"  href="css/hero.css" />
-<script src="js/jquery-1.6.2.min.js"></script>
+<script src="js/jquery-1.7.1.min.js"></script>
+<script src="js/jquery.countdown.js"></script>
 <script src="js/init.js"></script>
 <script src="js/indians.js"></script>
+<script src="js/arrow.js"></script>
 <script src="js/hero.js"></script>
 <script src="js/heroPlayer.js"></script>
 <script src="js/heroComputer.js"></script>
@@ -17,6 +19,24 @@
 
 <body>
 <div class="area" id="gameIndians">
+  <div class="splashScreen">
+    <h1>Fight of Indians</h1>
+    <ul>
+      <li><strong>one click</strong> - move to point</li>
+      <li><strong>double click</strong> - make shot</li>
+      <li>you have 30 seconds</li>
+    </ul>
+    <div class="records">
+      <h2>Last Result</h2>
+      <div class="best">        
+        <span class="you">You: <strong>0</strong></span>; 
+        <span class="enemy">Enemy: <strong>0</strong></span> 
+      </div>
+    </div>
+    <a class="startButton">PLAY NOW</a>
+  </div>  
+  <div class="pointLeft">0</div>
+  <div class="pointRight">0</div>
 	<div class="border left"></div>
 	<div class="border right"></div>
 </div>
