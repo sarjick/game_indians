@@ -12,17 +12,35 @@ HeroPlayer = function(params){
 HeroPlayer.prototype.init = function(params){
 	var o = this;
 	
-	o.parent.block.bind("click", function(e){
+	window.ondevicemotion = function(event) {
+	  ay = event.accelerationIncludingGravity.y;
+	  
+	  if(ay < -0.1){
 		o.hero.moveHeroToPoint({
-			"y" : e.pageY - o.parent.block.position().top
+			"y" : o.parent.block.position().top + o.parent.block.height()
+		});
+	  }
+	  else if(ay > 0.1){
+		o.hero.moveHeroToPoint({
+			"y" : o.parent.block.position().top
+		});  
+	  }
+	}
+	
+	o.parent.block.bind("touchstart", function(e){
+		o.hero.shot({
+			"y" : e.pageY - o.parent.block.position().top,
+			"who" : o.name
 		});
 	});
+	/*
 	o.parent.block.bind("dblclick", function(e){
 		o.hero.shot({
 			"y" : e.pageY - o.parent.block.position().top,
 			"who" : o.name
 		});
 	});
+	*/
 }
 HeroPlayer.prototype.stop = function(){
 	var o = this;
