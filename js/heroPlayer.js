@@ -33,14 +33,19 @@ HeroPlayer.prototype.init = function(params){
 			"who" : o.name
 		});
 	});
-	/*
+
+
+	o.parent.block.bind("click", function(e){
+		o.hero.moveHeroToPoint({
+			"y" : e.pageY - o.parent.block.position().top
+		});
+	});
 	o.parent.block.bind("dblclick", function(e){
 		o.hero.shot({
 			"y" : e.pageY - o.parent.block.position().top,
 			"who" : o.name
 		});
 	});
-	*/
 }
 HeroPlayer.prototype.stop = function(){
 	var o = this;
